@@ -7,12 +7,17 @@
 //
 
 #import "WhereamiAppDelegate.h"
+#import "WhereamiViewController.h"
 
 @implementation WhereamiAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    WhereamiViewController *viewController = [[WhereamiViewController alloc] initWithNibName:@"WhereamiViewController" bundle:nil];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 							

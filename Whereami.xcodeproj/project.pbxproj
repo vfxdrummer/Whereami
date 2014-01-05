@@ -13,14 +13,15 @@
 		2240D0CE1879D36A00A44B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0CC1879D36A00A44B04 /* InfoPlist.strings */; };
 		2240D0D01879D36A00A44B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0CF1879D36A00A44B04 /* main.m */; };
 		2240D0D41879D36A00A44B04 /* WhereamiAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0D31879D36A00A44B04 /* WhereamiAppDelegate.m */; };
-		2240D0D71879D36A00A44B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0D51879D36A00A44B04 /* Main.storyboard */; };
-		2240D0DA1879D36A00A44B04 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0D91879D36A00A44B04 /* WhereamiViewController.m */; };
 		2240D0DC1879D36A00A44B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0DB1879D36A00A44B04 /* Images.xcassets */; };
 		2240D0E31879D36A00A44B04 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2240D0E21879D36A00A44B04 /* XCTest.framework */; };
 		2240D0E41879D36B00A44B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2240D0C31879D36A00A44B04 /* Foundation.framework */; };
 		2240D0E51879D36B00A44B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2240D0C71879D36A00A44B04 /* UIKit.framework */; };
 		2240D0ED1879D36B00A44B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0EB1879D36B00A44B04 /* InfoPlist.strings */; };
 		2240D0EF1879D36B00A44B04 /* WhereamiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0EE1879D36B00A44B04 /* WhereamiTests.m */; };
+		2240D1001879D56D00A44B04 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */; };
+		2240D1011879D56D00A44B04 /* WhereamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */; };
+		2240D1031879D79400A44B04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2240D1021879D79400A44B04 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +45,16 @@
 		2240D0D11879D36A00A44B04 /* Whereami-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Whereami-Prefix.pch"; sourceTree = "<group>"; };
 		2240D0D21879D36A00A44B04 /* WhereamiAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiAppDelegate.h; sourceTree = "<group>"; };
 		2240D0D31879D36A00A44B04 /* WhereamiAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiAppDelegate.m; sourceTree = "<group>"; };
-		2240D0D61879D36A00A44B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2240D0D81879D36A00A44B04 /* WhereamiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
-		2240D0D91879D36A00A44B04 /* WhereamiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
 		2240D0DB1879D36A00A44B04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2240D0E11879D36A00A44B04 /* WhereamiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereamiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2240D0E21879D36A00A44B04 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2240D0EA1879D36B00A44B04 /* WhereamiTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhereamiTests-Info.plist"; sourceTree = "<group>"; };
 		2240D0EC1879D36B00A44B04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2240D0EE1879D36B00A44B04 /* WhereamiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhereamiTests.m; sourceTree = "<group>"; };
+		2240D0FD1879D56D00A44B04 /* WhereamiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhereamiViewController.h; sourceTree = "<group>"; };
+		2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
+		2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereamiViewController.xib; sourceTree = "<group>"; };
+		2240D1021879D79400A44B04 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2240D1031879D79400A44B04 /* MapKit.framework in Frameworks */,
 				2240D0C61879D36A00A44B04 /* CoreGraphics.framework in Frameworks */,
 				2240D0C81879D36A00A44B04 /* UIKit.framework in Frameworks */,
 				2240D0C41879D36A00A44B04 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		2240D0C21879D36A00A44B04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2240D1021879D79400A44B04 /* MapKit.framework */,
 				2240D0C31879D36A00A44B04 /* Foundation.framework */,
 				2240D0C51879D36A00A44B04 /* CoreGraphics.framework */,
 				2240D0C71879D36A00A44B04 /* UIKit.framework */,
@@ -114,10 +118,10 @@
 			children = (
 				2240D0D21879D36A00A44B04 /* WhereamiAppDelegate.h */,
 				2240D0D31879D36A00A44B04 /* WhereamiAppDelegate.m */,
-				2240D0D51879D36A00A44B04 /* Main.storyboard */,
-				2240D0D81879D36A00A44B04 /* WhereamiViewController.h */,
-				2240D0D91879D36A00A44B04 /* WhereamiViewController.m */,
 				2240D0DB1879D36A00A44B04 /* Images.xcassets */,
+				2240D0FD1879D56D00A44B04 /* WhereamiViewController.h */,
+				2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */,
+				2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */,
 				2240D0CA1879D36A00A44B04 /* Supporting Files */,
 			);
 			path = Whereami;
@@ -231,7 +235,7 @@
 			files = (
 				2240D0DC1879D36A00A44B04 /* Images.xcassets in Resources */,
 				2240D0CE1879D36A00A44B04 /* InfoPlist.strings in Resources */,
-				2240D0D71879D36A00A44B04 /* Main.storyboard in Resources */,
+				2240D1011879D56D00A44B04 /* WhereamiViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +256,7 @@
 			files = (
 				2240D0D41879D36A00A44B04 /* WhereamiAppDelegate.m in Sources */,
 				2240D0D01879D36A00A44B04 /* main.m in Sources */,
-				2240D0DA1879D36A00A44B04 /* WhereamiViewController.m in Sources */,
+				2240D1001879D56D00A44B04 /* WhereamiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +285,6 @@
 				2240D0CD1879D36A00A44B04 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2240D0D51879D36A00A44B04 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2240D0D61879D36A00A44B04 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2240D0EB1879D36B00A44B04 /* InfoPlist.strings */ = {
@@ -461,6 +457,7 @@
 				2240D0F41879D36B00A44B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2240D0F51879D36B00A44B04 /* Build configuration list for PBXNativeTarget "WhereamiTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +466,7 @@
 				2240D0F71879D36B00A44B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
