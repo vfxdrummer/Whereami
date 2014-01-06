@@ -7,6 +7,7 @@
 //
 
 #import "WhereamiViewController.h"
+#import "BNRMapPoint.h"
 
 @interface WhereamiViewController ()
 
@@ -43,13 +44,25 @@
 {
     CLLocation *newLocation = [locations lastObject];
     CLLocation *oldLocation;
-    NSLog(@"locations.count = %i", locations.count);
+    
     if (locations.count > 1) {
         oldLocation = [locations objectAtIndex:locations.count-2];
     } else {
         oldLocation = nil;
     }
-    NSLog(@"didUpdateToLocation %@ from %@", newLocation, oldLocation);
+    
+    // How many seconds ago was this new location created?
+    NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
+    
+    // CLLocationmanagers will return the last found location of the
+    // device first, you don't want that data in this case.
+    // If this location was made more than 3 minutes ago, ignore it
+    if (t < -180) {
+        // This is cached data, you don't want it, keep looking
+        return;
+    }
+    
+    [self foundLocation:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager
@@ -80,11 +93,53 @@
     // Dispose of any resources that can be recreated.
 }
 
+// MKMapView Delegate Functions
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     CLLocationCoordinate2D loc = [userLocation coordinate];
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
     [worldView setRegion:region animated:TRUE];
+}
+
+// UITextField Delegate Functions
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self findLocation];
+    
+    // remove keyboard from screen, active UITextField is no longer first repsponder
+    [textField resignFirstResponder];
+    
+    return TRUE;
+}
+
+- (void)findLocation
+{
+    NSLog(@"findLocation");
+    [locationManager startUpdatingLocation];
+    [activityIndicator startAnimating];
+    [locationTitleField setHidden:TRUE];
+}
+
+- (void)foundLocation:(CLLocation *)loc
+{
+    NSLog(@"foundLocation");
+    CLLocationCoordinate2D coord = [loc coordinate];
+    
+    // Create an instance of BNRMapPoint with the current data
+    BNRMapPoint *mp = [[BNRMapPoint alloc] initWithCoordinate:coord title:[locationTitleField text]];
+    
+    // Add it to the map view
+    [worldView addAnnotation:mp];
+    
+    // Zooom region to this location
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    [worldView setRegion:region animated:TRUE];
+    
+    // Reset the UI
+    [locationTitleField setText:@""];
+    [activityIndicator stopAnimating];
+    [locationTitleField setHidden:FALSE];
+    [locationManager stopUpdatingLocation];
 }
 
 @end
