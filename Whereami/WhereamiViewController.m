@@ -70,7 +70,7 @@
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view, typically from a nib.
-    [worldView setShowsUserLocation:YES];
+    [worldView setShowsUserLocation:TRUE];
     
 }
 
@@ -82,7 +82,9 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    
+    CLLocationCoordinate2D loc = [userLocation coordinate];
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+    [worldView setRegion:region animated:TRUE];
 }
 
 @end
