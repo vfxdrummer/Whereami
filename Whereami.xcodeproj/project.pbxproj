@@ -22,6 +22,7 @@
 		2240D1001879D56D00A44B04 /* WhereamiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */; };
 		2240D1011879D56D00A44B04 /* WhereamiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */; };
 		2240D1031879D79400A44B04 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2240D1021879D79400A44B04 /* MapKit.framework */; };
+		2240D106187A7CDE00A44B04 /* BNRMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240D105187A7CDE00A44B04 /* BNRMapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhereamiViewController.m; sourceTree = "<group>"; };
 		2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhereamiViewController.xib; sourceTree = "<group>"; };
 		2240D1021879D79400A44B04 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2240D104187A7CDE00A44B04 /* BNRMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRMapPoint.h; sourceTree = "<group>"; };
+		2240D105187A7CDE00A44B04 /* BNRMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRMapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				2240D0DB1879D36A00A44B04 /* Images.xcassets */,
 				2240D0FD1879D56D00A44B04 /* WhereamiViewController.h */,
 				2240D0FE1879D56D00A44B04 /* WhereamiViewController.m */,
+				2240D104187A7CDE00A44B04 /* BNRMapPoint.h */,
+				2240D105187A7CDE00A44B04 /* BNRMapPoint.m */,
 				2240D0FF1879D56D00A44B04 /* WhereamiViewController.xib */,
 				2240D0CA1879D36A00A44B04 /* Supporting Files */,
 			);
@@ -256,6 +261,7 @@
 			files = (
 				2240D0D41879D36A00A44B04 /* WhereamiAppDelegate.m in Sources */,
 				2240D0D01879D36A00A44B04 /* main.m in Sources */,
+				2240D106187A7CDE00A44B04 /* BNRMapPoint.m in Sources */,
 				2240D1001879D56D00A44B04 /* WhereamiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
